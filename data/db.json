@@ -1,13 +1,7 @@
 {
   "notes": [
     {
-      "title": "Yoshi's birthday bash",
-      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "category": "reminders",
-      "id": 1
-    },
-    {
-      "title": "Complete my ninja training",
+      "title": "Complete my react training",
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
       "category": "work",
       "id": 2
@@ -15,8 +9,32 @@
     {
       "title": "Order a pizza!",
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "category": "todos",
+      "category": "reminder",
       "id": 3
+    },
+    {
+      "title": "Complete the tasks",
+      "details": "Complete building the app.",
+      "category": "todos",
+      "id": 5
+    },
+    {
+      "title": "Pay the electricity Bill",
+      "details": "By this month end",
+      "category": "money",
+      "id": 6
+    },
+    {
+      "title": "Shop for clothes",
+      "details": "In Myntra, Ajio & Amazon for the festival shopping",
+      "category": "reminders",
+      "id": 7
+    },
+    {
+      "title": "UI for the app",
+      "details": "Implement Material design for the UI of the app using the Material-UI package.",
+      "category": "todos",
+      "id": 8
     }
   ]
 }

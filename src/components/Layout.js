@@ -1,34 +1,59 @@
 import {
+  AppBar,
+  Avatar,
   Drawer,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
   makeStyles,
+  Toolbar,
   Typography,
 } from "@material-ui/core";
-import { AddCircleOutlineOutlined, SubjectOutlined } from "@material-ui/icons";
+import {
+  AccountCircle,
+  AddCircleOutlineOutlined,
+  SubjectOutlined,
+} from "@material-ui/icons";
+import { format } from "date-fns";
 import { useHistory, useLocation } from "react-router-dom";
 
 const drawerWidth = 240;
 
-const useStyles = makeStyles({
-  page: {
-    background: "#f9f9f9",
-    width: "100%",
-  },
-  drawer: {
-    width: drawerWidth,
-  },
-  drawerPaper: {
-    width: drawerWidth,
-  },
-  root: {
-    display: "flex",
-  },
-  active: {
-    background: "#f4f4f4",
-  },
+const useStyles = makeStyles((theme) => {
+  return {
+    page: {
+      background: "#f9f9f9",
+      width: "100%",
+      padding: theme.spacing(3),
+    },
+    drawer: {
+      width: drawerWidth,
+    },
+    drawerPaper: {
+      width: drawerWidth,
+    },
+    root: {
+      display: "flex",
+    },
+    active: {
+      background: "#f4f4f4",
+    },
+    title: {
+      padding: theme.spacing(2),
+    },
+    appbar: {
+      width: `calc(100% - ${drawerWidth}px)`,
+    },
+    toolbar: theme.mixins.toolbar,
+    date: {
+      flexGrow: 1,
+    },
+    avatar: {
+      marginLeft: theme.spacing(2),
+      backgroundColor: "#fff",
+    },
+  };
 });
 
 export const Layout = (props) => {
@@ -53,7 +78,18 @@ export const Layout = (props) => {
     <div className={classes.root}>
       {/* app bar */}
 
-      {/* side drawer */}
+      <AppBar className={classes.appbar} elevation={1}>
+        <Toolbar>
+          <Typography className={classes.date}>
+            Today is the {format(new Date(), "do MMMM Y")}
+          </Typography>
+          <Typography>User</Typography>
+          <Avatar className={classes.avatar}>
+            <AccountCircle color="secondary" style={{ fontSize: 46 }} />
+          </Avatar>
+        </Toolbar>
+      </AppBar>
+
       <Drawer
         className={classes.drawer}
         variant="permanent"
@@ -61,10 +97,10 @@ export const Layout = (props) => {
         classes={{ paper: classes.drawerPaper }}
       >
         <div>
-          <Typography variant="h5">Notes App</Typography>
+          <Typography variant="h5" className={classes.title}>
+            Notes App
+          </Typography>
         </div>
-
-        {/* list links */}
 
         <List>
           {menuItems.map((item) => (
@@ -83,7 +119,10 @@ export const Layout = (props) => {
         </List>
       </Drawer>
 
-      <div className={classes.page}>{props.children}</div>
+      <div className={classes.page}>
+        <div className={classes.toolbar}></div>
+        {props.children}
+      </div>
     </div>
   );
 };
