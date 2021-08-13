@@ -85,7 +85,7 @@ export default function Create() {
           className={classes.field}
           label="Details"
           multiline
-          rows={4}
+          rows={10}
           variant="outlined"
           color="secondary"
           fullWidth

@@ -21,13 +21,13 @@
     {
       "title": "Pay the electricity Bill",
       "details": "By this month end",
-      "category": "money",
+      "category": "reminder",
       "id": 6
     },
     {
-      "title": "Shop for clothes",
-      "details": "In Myntra, Ajio & Amazon for the festival shopping",
-      "category": "reminders",
+      "title": "Shopping",
+      "details": "Shop for clothes online for the event",
+      "category": "money",
       "id": 7
     },
     {
@@ -35,6 +35,42 @@
       "details": "Implement Material design for the UI of the app using the Material-UI package.",
       "category": "todos",
       "id": 8
+    },
+    {
+      "title": "Pay the fee",
+      "details": "On the college portal",
+      "category": "reminder",
+      "id": 9
+    },
+    {
+      "title": "Update the project documentation",
+      "details": "Update the documentation of the project after fixing the typos and add new information for the project.",
+      "category": "work",
+      "id": 10
+    },
+    {
+      "title": "Laptop",
+      "details": "Buy a laptop",
+      "category": "money",
+      "id": 11
+    },
+    {
+      "title": "Presentation",
+      "details": "Prepare the presentation ppt",
+      "category": "work",
+      "id": 12
+    },
+    {
+      "title": "Course Goal",
+      "details": "Complete the capstone project",
+      "category": "todos",
+      "id": 13
+    },
+    {
+      "title": "New Task",
+      "details": "This is the new task to do",
+      "category": "todos",
+      "id": 14
     }
   ]
 }
